@@ -3,10 +3,10 @@ require 'gosu'
 class GameWindow < Gosu::Window
   SIZE = 500
   ORIGIN = SIZE/2
-  TIMES_DELTA = 5
-  SCALE = 50
-  ROSE_K = 4.0/9
-  DEL_THETA = Math::PI/180/2
+  TIMES_DELTA = 20
+  SCALE = 150
+  ROSE_K = 5.0/3.0
+  DEL_THETA = Math::PI/180/4
 
   def initialize
     super SIZE, SIZE
@@ -21,8 +21,6 @@ class GameWindow < Gosu::Window
 
   def draw
     draw_rose(ORIGIN, @k)
-    draw_rose(ORIGIN*3.0/2, @k/8)
-    draw_rose(ORIGIN*1.0/2, @k*2)
   end
 
   private
